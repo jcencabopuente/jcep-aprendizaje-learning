@@ -1,0 +1,83 @@
+apiVersion: quota.openshift.io/v1
+kind: ClusterResourceQuota
+metadata:
+  creationTimestamp: "2020-12-14T19:47:41Z"
+  generation: 1
+  managedFields:
+  - apiVersion: quota.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:namespaces: {}
+        f:total:
+          .: {}
+          f:hard:
+            .: {}
+            f:cpu: {}
+            f:memory: {}
+            f:pods: {}
+          f:used:
+            .: {}
+            f:cpu: {}
+            f:memory: {}
+            f:pods: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2020-12-14T19:47:41Z"
+  - apiVersion: quota.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:quota:
+          .: {}
+          f:hard:
+            .: {}
+            f:cpu: {}
+            f:memory: {}
+            f:pods: {}
+        f:selector:
+          .: {}
+          f:annotations:
+            .: {}
+            f:openshift.io/devops: {}
+          f:labels: {}
+    manager: oc
+    operation: Update
+    time: "2020-12-14T19:47:41Z"
+  name: jcclusterquota
+  resourceVersion: "302270"
+  selfLink: /apis/quota.openshift.io/v1/clusterresourcequotas/jcclusterquota
+  uid: 5ebd348e-d199-484b-ba4e-5fba7b172ff3
+spec:
+  quota:
+    hard:
+      cpu: "3"
+      memory: 3Gi
+      pods: "50"
+  selector:
+    annotations:
+      openshift.io/devops: ctc
+    labels: null
+status:
+  namespaces:
+  - namespace: jcep
+    status:
+      hard:
+        cpu: "3"
+        memory: 3Gi
+        pods: "50"
+      used:
+        cpu: "0"
+        memory: "0"
+        pods: "0"
+  total:
+    hard:
+      cpu: "3"
+      memory: 3Gi
+      pods: "50"
+    used:
+      cpu: "0"
+      memory: "0"
+      pods: "0"
