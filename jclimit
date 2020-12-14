@@ -24,3 +24,8 @@ spec:
       max:
         openshift.io/image-tags: 10
         openshift.io/image: 20
+    - type: Pod
+      max:
+        cpu: 3
+        memory: 3Gi
+        
